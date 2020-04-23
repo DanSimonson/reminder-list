@@ -13,16 +13,19 @@ function ReminderContainer(props) {
     setText(e.target.value);
   };
 
+  ///onClick={() => this.props.deleteTodo(todo.id)}
+
   const reminderList = props.reminders.length ? (
     props.reminders.map((todo) => {
       return (
         <div key={todo.id}>
           <span>{todo.text}</span>
+          <button onClick={() => props.deleteReminder(todo.id)}>Delete</button>
         </div>
       );
     })
   ) : (
-    <p className="center">No More Todos left</p>
+    <p className="center">No Reminders</p>
   );
   return (
     <>
@@ -59,7 +62,7 @@ const mapDispatchToProps = (dispatch) => {
   );*/
   return {
     addReminder: (text) => dispatch(addReminder(text)),
-    deleteReminder: () => dispatch(deleteReminder()),
+    deleteReminder: (id) => dispatch(deleteReminder(id)),
   };
 };
 

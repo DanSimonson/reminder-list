@@ -1,10 +1,10 @@
 import { ADD_REMINDER, DELETE_REMINDER } from "./ReminderTypes";
 
-let TodoId = Math.random();
+let TodoId = 1;
 
 export const addReminder = (text) => ({
   type: ADD_REMINDER,
-  id: TodoId,
+  id: TodoId++,
   text: text,
 });
 
