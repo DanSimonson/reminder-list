@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# This Honey Do Reminder Applicaton uses redux for state management. and was created as an example for Dan Simonson's blog post at ....
 
 ## Available Scripts
 
