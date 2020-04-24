@@ -15,7 +15,6 @@ import { ADD_REMINDER, DELETE_REMINDER } from "./ReminderTypes";
 const INITIAL_DATA = [];
 
 const ReminderReducer = (state = INITIAL_DATA, action) => {
-  console.log(action);
   switch (action.type) {
     case ADD_REMINDER:
       return [
