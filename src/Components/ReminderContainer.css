@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+.honeyInput {
+  padding: 1rem;
+  font-size: 1em;
+}
+
 .reminderInputDiv {
   display: flex;
   flex-direction: column;
@@ -5,58 +12,60 @@
   justify-content: center;
   margin-top: 2rem;
   padding: 1rem;
-  border: 5px solid black;
 }
 
 .reminderListDiv {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
   margin-top: 2rem;
   padding: 1rem;
-  border: 5px solid green;
 }
 .divContainer {
   max-width: 965px;
-
-  border: 5px solid red;
+  margin: 0 auto;
 }
 .output {
-  border: 5px solid brown;
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
+  position: relative;
+  border: 5px solid transparent;
+  background: transparent;
+  font-size: 2rem;
+  /*margin: 0 auto;*/
+}
+.positionAbsolute {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.title {
+  font-family: "Lora", serif;
 }
 .Btn {
-  /*width: 100px;
-  height: 100px;
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  border-radius: 50%;*/
-  height: 80px;
-  line-height: 80px;
-  width: 80px;
+  font-size: 0.8rem;
+  height: 60px;
+  line-height: 60px;
+  width: 60px;
   font-weight: bold;
-  font-size: 1rem;
   border-radius: 50%;
-  background-color: #4caf50;
-  color: white;
+  background-color: #ffc107;
+  color: #333;
   text-align: center;
   cursor: pointer;
-  border: 1px solid #4caf50;
+  border: 1px solid #ffc107;
+  transition: all 0.2s;
 }
-.Btn:focus {
+.Btn:active,
+.Btn:hover {
   outline: none;
+  color: #ffc107;
+  background-color: #333;
+  border: 1px solid #333;
 }
 img {
   max-width: 100%;
   max-height: 100%;
   display: block; /* remove extra space below image */
-  border: 1px solid grey;
 }
-.picDiv {
+.wrapper {
+  border-top: 5px dotted grey;
+  margin-top: 3rem;
 }

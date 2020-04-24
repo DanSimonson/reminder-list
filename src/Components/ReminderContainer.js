@@ -5,8 +5,6 @@ import "./ReminderContainer.css";
 
 function ReminderContainer(props) {
   const [text, setText] = useState("");
-  //const buttonOne = <button onClick={this.submit}>Submit</button>;
-  //const buttonTwo = <button>You May Enter</button>;
   const buttonOne = (
     <button
       className="Btn"
@@ -17,28 +15,27 @@ function ReminderContainer(props) {
       }}
       style={{ marginTop: "25px" }}
     >
-      Add Reminder
+      Add
     </button>
   );
   const buttonTwo = (
     <button className="Btn" type="button" style={{ marginTop: "25px" }}>
-      Add Reminder
+      Add
     </button>
   );
 
   const onChangeReminderText = (e) => {
     setText(e.target.value);
   };
-
+  //style={{ marginLeft: "25px" }} // style={{ width: "100%" }}
   const reminderList = props.reminders.length ? (
     props.reminders.map((todo) => {
       return (
         <div key={todo.id} className="output">
-          <p style={{ width: "3rem" }}>{todo.text}</p>
+          <p>{todo.text}</p>
           <button
-            className="Btn"
+            className="Btn positionAbsolute"
             onClick={() => props.deleteReminder(todo.id)}
-            style={{ marginLeft: "25px" }}
           >
             Delete
           </button>
@@ -57,11 +54,18 @@ function ReminderContainer(props) {
         />
       </div>
       <div className="reminderInputDiv">
-        <input onChange={onChangeReminderText} value={text} type="text"></input>
+        <input
+          onChange={onChangeReminderText}
+          value={text}
+          type="text"
+          className="honeyInput"
+        ></input>
         {text !== "" ? buttonOne : buttonTwo}
       </div>
-      <h2>Honey Do List</h2>
-      <div className="reminderListDiv">{reminderList}</div>
+      <div className="wrapper">
+        {/*<h2 className="title">Honey Do List</h2>*/}
+        <div className="reminderListDiv">{reminderList}</div>
+      </div>
     </div>
   );
 }
